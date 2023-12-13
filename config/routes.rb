@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+   # ... (autres routes)
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # Route pour afficher le formulaire d'édition d'une tâche
+  get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit_task'
+
+  # Route pour gérer la mise à jour d'une tâche via PATCH
+  patch 'tasks/:id', to: 'tasks#update'
 end
